@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -14,9 +17,8 @@
                 <div class="name">Earwindo banana</div>
                 <div class="username">@erwindo banana</div>
             </div>
-            <div class="bio">I'm sofatware devloper
-                thriygh sdhasdas full time
-                sadhsajhdiusahyfyiu
+            <div class="bio">I recently completed LC101 and am currently learning more about Java,
+                Spring, and Hibernate. I am actively looking for development positions.
             </div>
             <div class="information">
                 <div class="link">
@@ -132,7 +134,30 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="pagination">
+                    <div class="page_text">Showing <span>1</span>-<span>10</span>of<span>12</span>Records.</div>
+                    <div class="row_per_page">
+                        <form>
+                            <label>Row per page: </label>
+                            <select >
+                                <option>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                            </select>
+                        </form> 
+        
+                        <div class="selector-numbers">
+                            <!-- <div class="selector-numbers-range"> <span id="from">1</span>-<span id="to">3</span> of <span id="total">10</span></div> -->
+                            <div class="selector-numbers-toggles">
+                                <button id="back" class="back" onclick="backHandler()">back</button>
+                                <input type="text" id="current" class="current" value="1">
+                                <button id="next" class="next" onclick="nextHandler()">next</button>
+                            </div>
+                        </div>
+        
+                    </div>
+            </div>        
+        </div>     
     </div>
 </body>
 </html>
