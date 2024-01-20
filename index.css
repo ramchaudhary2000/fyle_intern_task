@@ -259,6 +259,9 @@ select{
 .selector-numbers img{
     width: 3rem;
     height: 3rem;
+
+    border-radius: 50%;
+    border: solid 2px #9ec0c6ce;
 }
 
 
