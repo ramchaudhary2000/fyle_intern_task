@@ -1,1 +1,1 @@
-export const github_bearer = "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"
+export const github_bearer = "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"
