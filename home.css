@@ -153,6 +153,22 @@ body{
     scroll-behavior: smooth;
 }
 
+.content-blur{
+    filter: blur(10px);
+}
+
+
+.loader{
+    color: #b1b100;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.error-class{
+    color: #ff0000;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
 ::-webkit-scrollbar {
     width: 0;  
     background: rgb(193, 183, 183);
@@ -251,13 +267,19 @@ select{
 .selector-numbers button svg {
     stroke-linecap:round;
     stroke-linejoin:round;
-    fill: #c9cfcf;
+    fill: #448995;
     height: 1.7rem;
     width: 1.7rem;
     transition: fill .5s;
 }
 .selector-numbers button:hover svg {
-    fill: #7b8a8a;
+    fill: #37707a;
+}
+.selector-numbers button:disabled {
+    pointer-events: none;
+}
+.selector-numbers button:disabled svg {
+    fill: #dddddd;
 }
 
 .selector-numbers-toggles{
@@ -286,3 +308,19 @@ select{
 
 
 
+
+
+.diff-user-button{
+    padding: .8rem 1.7rem;
+    outline: none;
+    border: none;
+    border-radius: .7rem;
+    background-color: #448995;
+    color: #E9F4F6;
+    transition: all .5s;
+    font-size: 1.2rem;
+}
+.diff-user-button:hover{
+    cursor: pointer;
+    background-color: #37707a;
+}

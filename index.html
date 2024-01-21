@@ -1,10 +1,11 @@
 <html>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="colorlib.com">
+    <title>User Search</title>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap"
@@ -14,18 +15,21 @@
 </head>
 
 <body>
-
-    <div class="search">
-        <a href="home.html">home</a>
-        <div class="title">Search The Username here</div>
-            <div class="input-field">
-                <input class="form-control" id="search_here" type="search" placeholder="Type to search..." />
-                <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.133 14.867 4 11 4C7.133 4 4 7.133 4 11C4 14.867 7.133 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="black"/>
-                    </svg>
-                </button>
-            </div>
-    </div>
+    <form class="input-field" onsubmit="profilePage(event)">
+        <input class="form-control" id="username_search" type="search" placeholder="Search a github username" />
+        <button><svg width="24" height="24" viewBox="0 0 24 24" fill="content" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.133 14.867 4 11 4C7.133 4 4 7.133 4 11C4 14.867 7.133 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" />
+            </svg>
+        </button>
+    </form>
 </body>
+<script>
+    function profilePage(e){
+        e.preventDefault();
+        const value = document.getElementById('username_search').value
+        document.location.assign(`${document.location.origin}/home.html?user=${value}`)
+    }
+</script>
 
 </html>
