@@ -11,13 +11,10 @@ export async function fetcher({ uri }, useAbortController=true) {
     abortController = useAbortController ? new AbortController() : null;
     const signal = abortController?.signal;
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer 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`);
+    myHeaders.append("auth", `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`);
 
     var requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow',
-        signal
+        auth: "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",
     };
 
     try {
