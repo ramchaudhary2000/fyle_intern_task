@@ -14,7 +14,9 @@ export async function fetcher({ uri }, useAbortController=true) {
     myHeaders.append("auth", `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`);
 
     var requestOptions = {
-        auth: "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",
+        // auth: "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",
+        auth:github_bearer ,
+
     };
 
     try {
