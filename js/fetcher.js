@@ -11,7 +11,7 @@ export async function fetcher({ uri }, useAbortController=true) {
     abortController = useAbortController ? new AbortController() : null;
     const signal = abortController?.signal;
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${github_bearer}`);
+    myHeaders.append("Authorization", `Bearer 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`);
 
     var requestOptions = {
         method: 'GET',
